@@ -77,7 +77,7 @@ python app.py
 - Do not modify the database manually unless needed for testing.
 
 ## Author
-Vemasani Charishma Chowdary
+**Vemasani Charishma Chowdary**
 
 ## Contact
 Email: vcharishmachowdary@gmail.com
