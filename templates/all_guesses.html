@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>All Games & Guesses</h2>
+{% for game in games %}
+    <h3>Game ID: {{ game.id }} | User: {{ game.user.username }} | Word: {{ game.word.word }} | Date: {{ game.timestamp.date() }} | Status: {{ game.status }}</h3>
+    <ul>
+    {% for guess in game.guesses %}
+        <li>Guess {{ guess.guess_order }}: {{ guess.guess_word }} ({{ guess.result_json }})</li>
+    {% endfor %}
+    </ul>
+{% endfor %}
+<a href="{{ back_url }}" class="btn btn-secondary">Back</a>
+{% endblock %}

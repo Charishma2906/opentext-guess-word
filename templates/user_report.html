@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>User Report for {{ username }}</h2>
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Date</th>
+        <th>Words Tried</th>
+        <th>Correct Guesses</th>
+    </tr>
+    {% for row in report_list %}
+    <tr>
+        <td>{{ row.date }}</td>
+        <td>{{ row.words_tried }}</td>
+        <td>{{ row.correct }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{{ url_for('daily_report') }}">Back</a>
+{% endblock %}

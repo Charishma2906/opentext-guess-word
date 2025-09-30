@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+  body {
+    background-image: url("C:\Users\vchar\Downloads\project_ot\opentext-guess-word\templates\game.jpg"); /* change path if needed */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  h2 {
+    text-align: center;
+    color: white; /* makes it visible */
+    margin-top: 50px;
+  }
+
+  form {
+    background: rgba(255, 255, 255, 0.85); /* transparent white box */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+
+  input, button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
+
+<h1>Welcome to Guess the Word Game!</h1>
+<a href="{{ url_for('register') }}"><button>Register</button></a>
+<a href="{{ url_for('login') }}"><button>Login</button></a>
+{% endblock %}
